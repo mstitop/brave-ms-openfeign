@@ -28,4 +28,11 @@ public class Demo {
         return feignServer.getPdemo(rsd);
     }
 
+    @RequestMapping(value = "/pdemo1",method = RequestMethod.POST)
+    public Rpd pdemo1(@RequestBody Rsd rsd){
+        Rsd rsd1 = Rsd.builder().id(rsd.getId()).name(rsd.getName()).build();
+        System.out.println("send to service");
+        return feignServer.getPdemo(rsd);
+    }
+
 }

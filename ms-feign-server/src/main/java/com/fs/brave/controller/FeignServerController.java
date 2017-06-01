@@ -27,7 +27,7 @@ public class FeignServerController {
     @RequestMapping(value = "/pdemo",method = RequestMethod.POST)
     public ResponseDemo postdemo(@RequestBody RequestDemo requestDemo) throws InterruptedException {
         System.out.println(requestDemo.getId()+"--"+requestDemo.getName());
-        TimeUnit.SECONDS.sleep(60);
+//        TimeUnit.SECONDS.sleep(60);
         ResponseDemo responseDemo = ResponseDemo.builder().id(123).name("brave").build();
         return responseDemo;
     }

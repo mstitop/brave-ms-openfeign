@@ -1,5 +1,17 @@
 spring:
   application:
     name: ms-feign-client
+  jackson:
+    default-property-inclusion: non_absent
+    serialization:
+      write_date_timestamps_as_nanoseconds: false
+    deserialization:
+      read_date_timestamps_as_nanoseconds: true
+  aop:
+    proxy-target-class: true
+  mvc:
+    favicon:
+      enabled: false
+
 server:
   port: 9002

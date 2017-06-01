@@ -18,4 +18,8 @@ public interface FeignServer {
     @RequestLine("POST /pdemo")
     @Headers("Content-Type: application/json")
     Rpd getPdemo(@RequestBody Rsd rsd);
+
+    @RequestLine("POST /pdemo")
+    @Headers("Content-Type: application/json")
+    Rpd getPdemo1(String content);
 }
